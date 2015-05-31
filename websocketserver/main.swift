@@ -8,5 +8,11 @@
 
 import Foundation
 
-println("Hello, World!")
+
+var s:Server = Server()
+var w:WebSocketHandler = WebSocketHandler()
+s.addHandler("/webSocket", handler: w)
+s.addHandler("/", handler: HttpHandler(webRoot:"/", folderPath: "/Volumes/MacDisk/work/websocketkeyboard/"))
+s.start(8080)
+
 

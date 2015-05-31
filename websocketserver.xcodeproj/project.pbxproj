@@ -7,7 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E7316A31B08824800336092 /* handler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7316A21B08824800336092 /* handler.swift */; };
+		0E7316A51B08826000336092 /* websockethandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7316A41B08826000336092 /* websockethandler.swift */; };
+		0E7316A71B08DD2A00336092 /* response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7316A61B08DD2A00336092 /* response.swift */; };
 		0ED755681B046561004FD14C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED755671B046561004FD14C /* main.swift */; };
+		0ED7556F1B046663004FD14C /* swellall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED7556E1B046663004FD14C /* swellall.swift */; };
+		0ED755721B0469B3004FD14C /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED755711B0469B3004FD14C /* GCDAsyncSocket.m */; };
+		0ED755751B046AAC004FD14C /* server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED755741B046AAC004FD14C /* server.swift */; };
+		0ED755771B046B5E004FD14C /* request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED755761B046B5E004FD14C /* request.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +30,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0E7316A21B08824800336092 /* handler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = handler.swift; sourceTree = "<group>"; };
+		0E7316A41B08826000336092 /* websockethandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = websockethandler.swift; sourceTree = "<group>"; };
+		0E7316A61B08DD2A00336092 /* response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = response.swift; sourceTree = "<group>"; };
 		0ED755641B046561004FD14C /* websocketserver */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = websocketserver; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ED755671B046561004FD14C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		0ED7556E1B046663004FD14C /* swellall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = swellall.swift; sourceTree = "<group>"; };
+		0ED755701B0469B3004FD14C /* websocketserver-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "websocketserver-Bridging-Header.h"; sourceTree = "<group>"; };
+		0ED755711B0469B3004FD14C /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		0ED755731B0469FC004FD14C /* GCDAsyncSocket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
+		0ED755741B046AAC004FD14C /* server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = server.swift; sourceTree = "<group>"; };
+		0ED755761B046B5E004FD14C /* request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = request.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +74,15 @@
 			isa = PBXGroup;
 			children = (
 				0ED755671B046561004FD14C /* main.swift */,
+				0ED7556E1B046663004FD14C /* swellall.swift */,
+				0ED755711B0469B3004FD14C /* GCDAsyncSocket.m */,
+				0ED755701B0469B3004FD14C /* websocketserver-Bridging-Header.h */,
+				0ED755731B0469FC004FD14C /* GCDAsyncSocket.h */,
+				0ED755741B046AAC004FD14C /* server.swift */,
+				0ED755761B046B5E004FD14C /* request.swift */,
+				0E7316A21B08824800336092 /* handler.swift */,
+				0E7316A41B08826000336092 /* websockethandler.swift */,
+				0E7316A61B08DD2A00336092 /* response.swift */,
 			);
 			path = websocketserver;
 			sourceTree = "<group>";
@@ -118,7 +143,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E7316A71B08DD2A00336092 /* response.swift in Sources */,
+				0ED755721B0469B3004FD14C /* GCDAsyncSocket.m in Sources */,
 				0ED755681B046561004FD14C /* main.swift in Sources */,
+				0ED755751B046AAC004FD14C /* server.swift in Sources */,
+				0ED755771B046B5E004FD14C /* request.swift in Sources */,
+				0E7316A31B08824800336092 /* handler.swift in Sources */,
+				0ED7556F1B046663004FD14C /* swellall.swift in Sources */,
+				0E7316A51B08826000336092 /* websockethandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,14 +238,21 @@
 		0ED7556C1B046561004FD14C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "websocketserver/websocketserver-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		0ED7556D1B046561004FD14C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "websocketserver/websocketserver-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -236,6 +275,7 @@
 				0ED7556D1B046561004FD14C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
